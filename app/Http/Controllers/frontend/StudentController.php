@@ -35,7 +35,8 @@ class StudentController extends Controller
     //edit students record
     public function edit($id)
     {
-
+        $student= Student::find($id);
+        return view('frontend.student.edit', compact('student'));
     }
     //update students record
     public function update(Request $request, $id)
