@@ -9,6 +9,29 @@
 </head>
 <body>
     <h1>All Student Record</h1>
-    
+    <table class="table">
+        <tr>
+            <th>SN</th>
+            <th>Student Name</th>
+            <th>Roll No</th>
+            <th>Faculty</th>
+            <th>Batch</th>
+            <th>Fathers Name</th>
+            <th>Actions</th>
+        </tr>
+        @foreach ($students as $index=>$student)
+        <tr>
+            <td>{{++$index}}</td>
+            <td>{{$student->name}}</td>
+            <td>{{$student->roll}}</td>
+            <td>{{$student->faculty}}</td>
+            <td>{{$student->batch}}</td>
+            <td>{{$student->father}}</td>
+            <td>
+                <a href="">Edit</a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
 </body>
 </html>

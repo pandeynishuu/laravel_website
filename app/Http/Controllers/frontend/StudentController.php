@@ -11,7 +11,9 @@ class StudentController extends Controller
     //show all students record
     public function index()
     {
-
+        $students = Student::all();
+        // return $students;
+        return view('frontend.student.index',compact('students'));
     }
     //show students form
     public function create()

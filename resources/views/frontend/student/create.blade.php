@@ -50,6 +50,7 @@
                     <button type="submit" class="btn bg-primary">
                         Submit
                     </button>
+                  <a href="/student" class="btn bg-primary">save all record</a>
                 </div>
         </div>
         </form>
