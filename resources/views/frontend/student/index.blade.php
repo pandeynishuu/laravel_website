@@ -31,7 +31,11 @@
                 <td>{{ $student->batch }}</td>
                 <td>{{ $student->father }}</td>
                 <td>
-                    <a href="/student/{{$student->id}}">Edit</a>
+                    <form action="" method="post">
+                        @csrf
+                        <a href="/student/{{$student->id}}">Edit</a>
+                        <button type="submit" class="btn bg-primary">delete</button>
+                    </form>
                 </td>
             </tr>
         @endforeach

@@ -41,7 +41,14 @@ class StudentController extends Controller
     //update students record
     public function update(Request $request, $id)
     {
-
+        $student = Student::find($id);
+        $student->name = $request->name;
+        $student->roll = $request->roll;
+        $student->faculty = $request->faculty;
+        $student->batch = $request->batch;
+        $student->father = $request->father;
+        $student->update();
+        return redirect()->back();
     }
     //show single student record
     public function show($id)

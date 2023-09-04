@@ -14,7 +14,7 @@
     <h1>Edit Student Form</h1>
     <div class="container">
         <div class="row">
-            <form action="/student" method="post">
+            <form action="/student/{{$student->id}}" method="post">
                 @csrf
                 <div class="col-md-4">
                     <div class="form-group">
@@ -48,9 +48,10 @@
                 </div>
                 <div class="col-md-12 py-3">
                     <button type="submit" class="btn bg-primary">
-                        Submit
+                        Update record
                     </button>
                   <a href="/student" class="btn bg-primary">save all record</a>
+                  <a href="/" class="btn bg-primary">New student</a>
                 </div>
         </div>
         </form>
