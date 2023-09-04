@@ -31,10 +31,10 @@
                 <td>{{ $student->batch }}</td>
                 <td>{{ $student->father }}</td>
                 <td>
-                    <form action="" method="post">
+                    <form action="/student/{{$student->id}}" method="post">
                         @csrf
-                        <a href="/student/{{$student->id}}">Edit</a>
-                        <button type="submit" class="btn bg-primary">delete</button>
+                        <a href="/student/{{$student->id}}" class="badge bg-primary">Edit</a>
+                        <button type="submit" class="btn badge bg-danger">delete</button>
                     </form>
                 </td>
             </tr>
